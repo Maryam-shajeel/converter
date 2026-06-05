@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(170, 167, 164);
+}
+
+body {
+    background-color: rgb(22, 75, 62);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.age-converter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 20px;
+    align-items: center;
+    background-color: rgb(41, 103, 103);
+    box-shadow: 0 10px 25px rgb(205, 200, 200);
+    width: 90%;
+    max-width: 500px;
+    padding: 50px;
+    margin: 50px;
+}
+
+.converter-card {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.converter-card h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+#years {
+    width: 80%;
+    padding: 12px;
+    margin: 15px 0;
+    border: 2px solid rgb(170, 167, 164);
+    border-radius: 8px;
+    background-color: rgb(60, 120, 120);
+    color: white;
+    font-size: 16px;
+}
+
+#years::placeholder {
+    color: rgb(170, 167, 164);
+}
+
+button {
+    padding: 12px 30px;
+    margin: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    background-color: rgb(76, 175, 80);
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: rgb(56, 142, 60);
+}
+
+#resetBtn {
+    background-color: rgb(244, 67, 54);
+}
+
+#resetBtn:hover {
+    background-color: rgb(211, 47, 47);
+}
+
+.result-container {
+    width: 80%;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    text-align: center;
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#result {
+    font-size: 20px;
+    font-weight: bold;
+    color: antiquewhite;
+
+}
