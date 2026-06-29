@@ -1,1 +1,0 @@
-id = "resetBtn" onclick = "document.write()

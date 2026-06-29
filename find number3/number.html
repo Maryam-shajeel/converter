@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Find Next Number</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+            width: 300px;
+            text-align: center;
+        }
+
+        input,
+        button {
+            margin: 8px 0;
+            padding: 8px;
+            width: 100%;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            background: #007bff;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #0056b3;
+        }
+
+        .result {
+            margin-top: 12px;
+            font-weight: bold;
+            color: #333;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Find Next Number</h2>
+
+        <!-- Scenario 1: Array lookup -->
+        <p>Array: [10, 20, 30, 40, 50]</p>
+        <input type="number" id="arrayInput" placeholder="Enter number from array">
+        <button onclick="findNextInArray()">Find Next in Array</button>
+
+        <!-- Scenario 2: User input integer/float -->
+        <input type="text" id="userInput" placeholder="Enter any number">
+        <button onclick="findNextNumber()">Find Next Number</button>
+
+        <div class="result" id="result"></div>
+    </div>
+
+    <script>
+        const numbers = [10, 20, 30, 40, 50];
+
+        // Scenario 1
+        function findNextInArray() {
+            let target = Number(document.getElementById("arrayInput").value);
+            let index = numbers.indexOf(target);
+            let resultBox = document.getElementById("result");
+
+            if (index !== -1 && index < numbers.length - 1) {
+                resultBox.textContent = "Next number is: " + numbers[index + 1];
+            } else {
+                resultBox.textContent = "No next number found!";
+            }
+        }
+
+        // Scenario 2
+        function findNextNumber() {
+            let input = document.getElementById("userInput").value;
+            let num = Number(input);
+            let resultBox = document.getElementById("result");
+
+            if (isNaN(num)) {
+                resultBox.textContent = "Invalid input!";
+                return;
+            }
+
+            if (Number.isInteger(num)) {
+                resultBox.textContent = "You entered an integer. Next number is: " + (num + 1);
+            } else {
+                resultBox.textContent = "You entered a float. Next number is: " + (num + 0.1);
+            }
+        }
+    </script>
+</body>
+
+</html>
