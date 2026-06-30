@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        section {
+            margin-bottom: 30px;
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+
+        input,
+        button {
+            padding: 8px;
+            margin: 5px 0;
+        }
+
+        .result {
+            font-weight: bold;
+            color: darkblue;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <h2> Array First & Last</h2>
+        <button onclick="generateArray()">Generate Array</button>
+        <p id="arrayDisplay"></p>
+        <p class="result" id="arrayResult"></p>
+    </section>
+    <script>
+        function generateArray() {
+            let arr = Array.from({ length: 5 }, () => Math.floor(Math.random() * 100));
+            document.getElementById("arrayDisplay").textContent = "Generated Array: " + arr;
+            document.getElementById("arrayResult").textContent = "First: " + arr[0] + ", Last: " + arr[arr.length - 1];
+        }
+    </script>
+
+</body>
+
+</html>

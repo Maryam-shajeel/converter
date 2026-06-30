@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        section {
+            margin-bottom: 30px;
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+
+        input,
+        button {
+            padding: 8px;
+            margin: 5px 0;
+        }
+
+        .result {
+            font-weight: bold;
+            color: darkblue;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <h2> Add Two Numbers</h2>
+        <label>Enter First Number:</label>
+        <input type="text" id="num1"><br>
+        <label>Enter Second Number:</label>
+        <input type="text" id="num2"><br>
+        <label>Result:</label>
+        <input type="text" id="sumResult" readonly>
+    </section>
+    <script>
+        let num1 = document.getElementById("num1");
+        let num2 = document.getElementById("num2");
+        let sumResult = document.getElementById("sumResult");
+
+        num1.addEventListener("input", () => {
+            sumResult.value = "NaN"; // show NaN until second input is given
+        });
+
+        num2.addEventListener("input", () => {
+            let val1 = parseInt(num1.value);
+            let val2 = parseInt(num2.value);
+            sumResult.value = val1 + val2;
+        });
+    </script>
+
+</body>
+
+</html>

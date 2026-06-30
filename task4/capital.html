@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Assignment Tasks</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+
+    section {
+      margin-bottom: 30px;
+      padding: 15px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+
+    input,
+    button {
+      padding: 8px;
+      margin: 5px 0;
+    }
+
+    .result {
+      font-weight: bold;
+      color: darkblue;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Name Capitalization -->
+  <section>
+    <h2> Capitalize Name</h2>
+    <input type="text" id="nameInput" placeholder="Enter name in lowercase">
+    <button onclick="capitalizeName()">Submit</button>
+    <p class="result" id="nameResult"></p>
+  </section>
+  <script>
+    function capitalizeName() {
+      let name = document.getElementById("nameInput").value;
+      let capitalized = name.charAt(0).toUpperCase() + name.slice(1);
+      document.getElementById("nameResult").textContent = "Capitalized Name: " + capitalized;
+    }
+  </script>
+</body>
+
+</html>
